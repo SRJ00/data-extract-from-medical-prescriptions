@@ -1,3 +1,13 @@
+## 📁 Project Files Description
+
+| File Name | Description |
+|-----------|-------------|
+| **`medical_prescription_extract.py`** | 🔍 **Extraction Pipeline**<br>Uses **Gemini Flash 2 (multimodal model)** to extract structured information from **handwritten prescription images** in batches of 10.<br>Extracted details include patient name, age, gender, clinic name, and medicine details (name, dosage, frequency).<br>Outputs the data to `extracted_data.csv`. |
+| **`evaluate_prescription.py`** | ✅ **Validation & Evaluation Pipeline**<br>Performs validation of extracted medicines and dosages using **Gemini Flash 2 (text model)**.<br>Checks for valid entries, missing dosages, and unsafe drug combinations.<br>Processes data in **batches of 10 prescriptions**.<br>Final validated output is saved in `validated_prescriptions.csv`. |
+| **`model_architecture.md`** | 🧠 **Model Architecture & Flow**<br>Includes **Mermaid diagrams** illustrating two separate workflows:<br>1. Extraction from image to CSV<br>2. Validation from structured data to evaluated output<br>Shows usage of batching and the role of Gemini Flash 2. |
+| **`model_evaluation.md`** | 📊 **Evaluation Strategy & Key Insights**<br>Explains the strategy used to evaluate messy handwritten prescriptions with unclear handwriting and mixed content.<br>Describes validation accuracy (**60%**) and the benefit of this pipeline in real-world scenarios such as improving data quality and patient safety. |
+| **`validated_prescriptions.csv`** | 📦 **Final Output CSV**<br>Contains merged extracted and validated information per prescription, including flags for invalid medicines, missing dosages, unsafe interactions, and model-generated comments. |
+
 # Extraction and Evaluation Pipeline for Handwritten Medical Prescription
 
 ## 1. Extraction Pipeline
@@ -89,3 +99,4 @@ The evaluation strategy focuses on validating the quality and accuracy of the ex
 ---
 
 This approach enables a comprehensive and efficient system for extracting and evaluating medical prescriptions, ensuring both data quality and patient safety despite the challenges of unclear handwriting and messy prescriptions.
+
