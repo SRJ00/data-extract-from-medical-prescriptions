@@ -32,7 +32,7 @@ The extraction pipeline focuses on transforming handwritten medical prescription
 
 ---
 
-## 2. Description of Your Multimodal Model Usage
+## 2. Description of the Multimodal Model Usage
 
 ### Overview:
 The **Gemini Flash 2** model is employed for extracting and evaluating medical prescription data from images. As a multimodal model, it combines both image and text-based processing to enhance the accuracy of data extraction from messy handwritten prescriptions.
